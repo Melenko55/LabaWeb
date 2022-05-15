@@ -1,0 +1,129 @@
+.cart {
+    display: flex;
+    padding-top: 20px;
+    &-items {
+        flex: 10;
+        display: flex;
+        flex-direction: column;
+    }
+    &-headings, &-item {
+        display: flex;
+        padding: 15px;
+        .id {
+            flex: 1;
+            text-align: center;
+        }
+        .name {
+            flex: 3;
+            margin-left: 15px;
+            text-align: left;
+        }
+        .amount {
+            flex: 1;
+            text-align: center;
+        }
+        .price {
+            flex: 1;
+            text-align: center;
+        }
+        .total {
+            flex: 1;
+            text-align: center;
+        }
+        .image {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-payment {
+        flex: 3;
+        background-color: $purple-lite;
+        color: white;
+        padding: 50px 30px;
+        margin-right: 10px;
+        border-radius: 15px;
+        height: fit-content;
+        &__discount, &__total, &__to-pay {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px; 
+            .total-label {
+                font-size: 20px;
+                font-weight: bold;
+                color: $purple-medium;
+            }
+            .total-value {
+                font-size: 20px;
+                font-weight: bold;
+                color: $purple-dark;
+            }
+        }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            button {
+                width: 100%;
+                height: 50px;
+                border-radius: 15px;
+                background-color: $purple-lite;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                border: 2px solid $white;
+                cursor: pointer;
+                transition: 1s;
+                &:hover {
+                    background-color: $purple-medium;
+                }
+            }
+        }
+    }
+}
+
+@include respond-to(handhelds) {
+   .cart {
+        flex-direction: column;
+        &-payment {
+            width: 70%;
+            max-width: 70%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+         &-headings, &-item {
+            font-size: 12px;
+            .image {
+                display: none;
+            }
+            div {
+                margin-right: 5px;
+            }
+        }
+        
+    }
+}
+@include respond-to(wide-handhelds) {
+    .cart {
+        flex-direction: column;
+        &-payment {
+            width: 70%;
+            max-width: 70%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+         &-headings, &-item {
+            font-size: 12px;
+            .image {
+                display: none;
+            }
+        }
+        
+    }
+}

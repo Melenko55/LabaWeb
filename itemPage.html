@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesItem.css">
+    <script src="https://kit.fontawesome.com/20d62529e7.js" crossorigin="anonymous"></script>
+    <title>Item</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-content">
+            <a href="./index.html">
+                <img src="./assets/logo.png" alt="logo">
+            </a>
+            <div class="logo-content__slogan">
+                <h4>For you and your family</h4>
+                <h6>With <span class="text-purple">comfort</span> and <span class="text-purple">love</span></h6>
+            </div>
+        </div>
+
+        <button id="contact">Contact Us!</button>
+    </header>
+
+    <nav class="navigation">
+        <ul class="navigation-links">
+            <li><a href="./index.html">Catalog</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <section class="item-content">
+        <div class="item-content__img">
+            <img src="./assets/goods/pyg1.jpg" alt="item-img">
+
+            <div class="images">
+                <img src="./assets/goods/pyg1.jpg" alt="item-img">
+                <img src="./assets/goods/pyg1.jpg" alt="item-img">
+                <img src="./assets/goods/pyg1.jpg" alt="item-img">
+            </div>
+        </div>
+        <div class="item-container">
+            <h3>Pyjame Naming</h3>
+            <p class="item-container__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, quidem.
+            </p>
+
+            <div class="item-container__manufact">
+                <h6>Manufacturer: <span>Turkey</span></h6>
+                <h6>Material: <span>Cotton</span></h6>
+            </div>
+
+            <div class="colors">
+                <h6>Colors:</h6>
+                <div class="colors-list">
+                    <div class="colors__item">
+                        <p class="white">White</p>
+                    </div>
+                    <div class="colors__item">
+                        <p class="black">Black</p>
+                    </div>
+                    <div class="colors__item">
+                        <p class="red">Red</p>
+                    </div>
+                    <div class="colors__item">
+                        <p class="blue">Blue</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sizes">
+                <h6>Sizes:</h6>
+                <div class="sizes-list">
+                    <div class="sizes__item">
+                        <p>XS</p>
+                    </div>
+                    <div class="sizes__item">
+                        <p>S</p>
+                    </div>
+                    <div class="sizes__item">
+                        <p>M</p>
+                    </div>
+                    <div class="sizes__item">
+                        <p>L</p>
+                    </div>
+                    <div class="sizes__item">
+                        <p>XL</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy-info">
+                <div class="buy-info__price">
+                    <h4>$100</h4>
+                </div>
+                <div class="buy-btn">
+                    <button>Buy</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        <div class="footer-container__copyright">
+            ©2022 Created by <span class="text-purple">Melenko Oleksandr</span>
+        </div>
+        <div class="footer-container__nav">
+            <ul class="footer-container__nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-container__social">
+            <ul class="footer-container__social-list">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <form id="modal" class="modal hide" action="POST">
+        <div class="thanks hide">
+            <h2>Thank you for your response!</h2>
+            <p>We will contact you as soon as possible</p>
+        </div>
+        <div class="modal__content">
+            <div class="modal__content-header">
+                <h2>Write down your conacts</h2>
+                <div id="modal__content-close" class="modal__content-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal__content-body">
+                <div class="modal__content-body-input">
+                    <label for="phone">Phone number</label>
+                    <input placeholder="+380(99) 999 99 99" required type="text" id="phone" name="phone">
+                </div>
+                <div class="modal__content-body-input">
+                    <label for="name">Name and Surname</label>
+                    <input placeholder="Stepan Bandera" required type="text" id="name" name="name">
+                </div>
+            </div>
+            <div class="modal__content-footer">
+                <button class="modal__content-footer-btn">
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

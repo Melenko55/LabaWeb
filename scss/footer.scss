@@ -1,0 +1,111 @@
+.footer-container {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $purple-lite;
+    &__copyright {
+        color:#fff;
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        font-size: 16px;
+        color: #fff;
+        
+        &-list {
+            display: flex;
+            li {
+                margin: 0 10px;
+                font-size: 12px;
+                &:hover {
+                    cursor: pointer;
+                    color: #fff;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        font-size: 14px;
+        color: #fff;
+        &-list {
+            display: flex;
+            li {
+                margin: 0 10px;
+                &:hover {
+                    cursor: pointer;
+                    color: #fff;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+    
+ @include respond-to(handhelds) { 
+     .footer-container {
+        padding: 25px;
+        flex-direction: column;
+          &__copyright {
+              text-align: center;
+           font-size: 14px;
+           order: 3;
+           margin-top: 15px;
+        }
+         &__nav{
+             order: 1;
+             padding: 0;
+             &-list {
+                 flex-direction: column;
+                align-items: center;
+                 padding: 0;
+                 li {
+                     margin-top: 10px;
+                 }
+             }
+         }
+         &__social{
+             order: 2;
+             padding: 0;
+             margin-top: -10px;
+             &-list {
+                 padding: 0;
+                margin: 10px;
+             }
+         }
+     }
+ }
+
+ @include respond-to(wide-handhelds) { 
+    .footer-container {
+        padding: 25px;
+        flex-direction: column;
+          &__copyright {
+           font-size: 14px;
+           order: 3;
+           margin-top: 15px;
+        }
+         &__nav{
+             order: 1;
+             padding: 0;
+             &-list {
+                 padding: 0;
+             }
+         }
+         &__social{
+             order: 2;
+             padding: 0;
+             margin-top: -10px;
+             &-list {
+                 padding: 0;
+                margin: 10px;
+             }
+         }
+     }
+ }

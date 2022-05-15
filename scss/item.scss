@@ -1,0 +1,183 @@
+.item-content {
+    display: flex;
+    box-sizing: border-box;
+    
+    justify-content: center;
+    padding: 40px;
+    height: fit-content;
+    &__img {
+        img {
+            height: 500px;
+        }
+        .images {
+            padding: 30px 0;
+            display: flex;
+           justify-content: start;
+            align-items: center;
+            height: 150px;
+            img {
+                margin-right: 20px;
+                height: 100%;
+            }
+        }
+        flex: 3;
+    }
+
+    .item-container {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        h3 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        &__desc {
+            max-width: 400px;
+            text-align: center;
+            margin-bottom: 5px;
+            padding: 0;
+        }
+        &__manufact {
+            h6 {
+                padding: 0;
+                font-size: 12px;
+                font-weight: 500;
+                margin: 0;
+            }
+            span {
+                    font-weight: 400;
+                    margin-left: 5px;
+                }
+            margin-top: 30px;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    .colors, .sizes {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        h6 {
+            padding: 0;
+            margin: 0;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        &-list {
+            font-weight: bold;
+            font-size: 14px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    .buy-info {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+          &__price {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: $purple-medium;
+                padding: 0;
+            }
+        .buy-btn {
+          
+            button {
+                padding: 10px 25px;
+                font-size: 18px;
+                border: 2px solid $purple-medium;
+                border-radius: 5px;
+                background-color: transparent;
+                color: $purple-medium;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background-color: $purple-medium;
+                    color: $white;
+                }
+            }
+           
+        }
+    }
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.black {
+    color: black;
+}
+
+.white {
+    color: rgb(214, 206, 206);
+}
+
+
+
+ @include respond-to(handhelds) { 
+    .item-content {
+        padding: 20px;;
+        flex-direction: column;
+        &__img {
+            width: 100%;
+            img {
+                width: inherit;
+                height: inherit;
+            }
+            .images {
+                display: none;
+            }
+        }
+        .item-container {
+            align-items: center;
+            text-align: center;
+            h3 {
+                font-size: 24px;
+            }
+            &__desc {
+               font-size: 12px
+            }
+            .colors {
+                &-list {
+                    font-size: 12px;
+                    flex-direction: column;
+                     
+                }
+               &__item {
+                   p {
+                    margin: 0;
+                    margin-top: 15px;
+                    padding: 0;
+                   }
+                   
+               }
+            }
+        }
+
+        .buy-info {
+            &__price {
+                margin-top: 20px;
+                font-size: 24px;
+                margin-bottom: 10px;
+                padding: 0;
+            }
+            flex-direction: column
+        }
+    }
+  };
+ 
